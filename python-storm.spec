@@ -7,7 +7,7 @@ Summary: Storm is an Object Relational Mapper for Python
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: https://launchpad.net/storm/trunk/0.9/+download/%{oname}-%{version}.tar.bz2
+Source0: https://launchpad.net/storm/trunk/%{version}/+download/%{oname}-%{version}.tar.bz2
 License: GPL
 URL: http://storm.canonical.com/
 Group: Development/Python
