@@ -1,6 +1,6 @@
 %define oname storm
 %define name python-%{oname}
-%define version 0.9
+%define version 0.11
 %define release %mkrel 1
 
 Summary: Storm is an Object Relational Mapper for Python
@@ -43,5 +43,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc TODO LICENSE tests/tutorial.txt tests/
+%doc TODO LICENSE README tests/tutorial.txt tests/
 %{py_puresitedir}/*
