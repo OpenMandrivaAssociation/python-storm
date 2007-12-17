@@ -11,7 +11,6 @@ Source0: https://launchpad.net/storm/trunk/%{version}/+download/%{oname}-%{versi
 License: GPL
 URL: http://storm.canonical.com/
 Group: Development/Python
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Prefix: %{_prefix}
 BuildArch: noarch
 BuildRequires: libpython-devel
