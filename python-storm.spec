@@ -3,7 +3,7 @@
 %define version 0.11
 %define release %mkrel 1
 
-Summary: Storm is an Object Relational Mapper for Python
+Summary: Object Relational Mapper for Python
 Name: %{name}
 Version: %{version}
 Release: %{release}
