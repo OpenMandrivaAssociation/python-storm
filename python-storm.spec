@@ -1,7 +1,7 @@
 %define oname storm
 %define name python-%{oname}
 %define version 0.13
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Object Relational Mapper for Python
 Name: %{name}
