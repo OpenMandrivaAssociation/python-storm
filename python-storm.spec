@@ -1,22 +1,22 @@
-%define oname storm
-%define name python-%{oname}
-%define version 0.13
-%define release %mkrel 3
+%define oname	storm
+%define name	python-%{oname}
+%define version 0.16.0
+%define release %mkrel 1
 
-Summary: Object Relational Mapper for Python
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: https://launchpad.net/storm/trunk/%{version}/+download/%{oname}-%{version}.tar.bz2
-License: GPL
-URL: http://storm.canonical.com/
-Group: Development/Python
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Prefix: %{_prefix}
-BuildArch: noarch
-BuildRequires: libpython-devel
-Requires:  python >= 2.4
-Requires: python-psycopg2 python-sqlite2
+Summary:	Object Relational Mapper for Python
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Source0:	https://launchpad.net/storm/trunk/%{version}/+download/%{oname}-%{version}.tar.bz2
+License:	GPLv2
+URL:		http://storm.canonical.com/
+Group:		Development/Python
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Prefix:		%{_prefix}
+BuildArch:	noarch
+BuildRequires:	libpython-devel
+Requires: 	python >= 2.4
+Requires:	python-psycopg2 python-sqlite2
 
 %description
 Storm is an object-relation mapper (ORM) for the Python language. It allows
