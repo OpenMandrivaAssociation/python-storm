@@ -2,9 +2,9 @@
 
 Summary:	Object Relational Mapper for Python
 Name:		python-%{oname}
-Version:	0.18
-Release:	2
-Source0:	https://launchpad.net/storm/trunk/%{version}/+download/%{oname}-%{version}.tar.bz2
+Version:	0.19
+Release:	1
+Source0:	https://launchpad.net/storm/trunk/0.19/+download/storm-%{version}.tar.bz2
 License:	GPLv2
 URL:		http://storm.canonical.com/
 Group:		Development/Python
@@ -92,4 +92,5 @@ cp -af storm/ %{buildroot}%{py_puresitedir}
 * Tue Jul 17 2007 Bogdano Arendartchuk <bogdano@mandriva.com> 0.9-1mdv2008.0
 + Revision: 53014
 - Import python-storm
+
 
