@@ -4,12 +4,12 @@ Summary:	Object Relational Mapper for Python
 Name:		python-%{oname}
 Version:	0.19
 Release:	1
-Source0:	https://launchpad.net/storm/trunk/0.19/+download/storm-%{version}.tar.bz2
-License:	GPLv2
-URL:		http://storm.canonical.com/
 Group:		Development/Python
+License:	GPLv2
+Url:		http://storm.canonical.com/
+Source0:	https://launchpad.net/storm/trunk/0.19/+download/storm-%{version}.tar.bz2
 BuildArch:	noarch
-BuildRequires:	python-devel
+BuildRequires:	pkgconfig(python)
 Requires:	python
 Requires:	python-psycopg2
 Requires:	python-sqlite2
@@ -26,7 +26,7 @@ language like Python.
   allowing you to mix "old school" code and ORM code
 
 %prep
-%setup -q -n %{oname}-%{version}
+%setup -qn %{oname}-%{version}
 
 %build
 
@@ -37,60 +37,4 @@ cp -af storm/ %{buildroot}%{py_puresitedir}
 %files
 %doc TODO LICENSE README tests/tutorial.txt tests/
 %{py_puresitedir}/*
-
-
-%changelog
-* Mon Nov 29 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.18-1mdv2011.0
-+ Revision: 603076
-- update to new version 0.18
-
-* Sat Oct 30 2010 Michael Scherer <misc@mandriva.org> 0.17-2mdv2011.0
-+ Revision: 590595
-- rebuild for python 2.7
-
-* Sat Oct 23 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.17-1mdv2011.0
-+ Revision: 587731
-- update to new version 0.17
-
-* Mon Mar 08 2010 Sandro Cazzaniga <kharec@mandriva.org> 0.16.0-1mdv2010.1
-+ Revision: 515958
-- update to 0.16.0
-
-* Tue Sep 15 2009 Thierry Vignaud <tv@mandriva.org> 0.13-3mdv2010.0
-+ Revision: 442498
-- rebuild
-
-* Fri Jan 02 2009 Funda Wang <fwang@mandriva.org> 0.13-2mdv2009.1
-+ Revision: 323372
-- rebuild
-
-* Thu Sep 04 2008 Jérôme Soyer <saispo@mandriva.org> 0.13-1mdv2009.0
-+ Revision: 280473
-- New release
-
-* Fri Aug 01 2008 Thierry Vignaud <tv@mandriva.org> 0.11-5mdv2009.0
-+ Revision: 259825
-- rebuild
-
-* Fri Jul 25 2008 Thierry Vignaud <tv@mandriva.org> 0.11-4mdv2009.0
-+ Revision: 247679
-- rebuild
-
-* Mon Feb 18 2008 Thierry Vignaud <tv@mandriva.org> 0.11-2mdv2008.1
-+ Revision: 171068
-- rebuild
-- fix "foobar is blabla" summary (=> "blabla") so that it looks nice in rpmdrake
-- kill re-definition of %%buildroot on Pixel's request
-
-  + Olivier Blin <oblin@mandriva.com>
-    - restore BuildRoot
-
-* Fri Oct 26 2007 Bogdano Arendartchuk <bogdano@mandriva.com> 0.11-1mdv2008.1
-+ Revision: 102257
-- new version 0.11
-
-* Tue Jul 17 2007 Bogdano Arendartchuk <bogdano@mandriva.com> 0.9-1mdv2008.0
-+ Revision: 53014
-- Import python-storm
-
 
