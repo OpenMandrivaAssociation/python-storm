@@ -3,7 +3,7 @@
 Summary:	Object Relational Mapper for Python
 Name:		python-%{oname}
 Version:	0.19
-Release:	1
+Release:	2
 Source0:	https://launchpad.net/storm/trunk/0.19/+download/storm-%{version}.tar.bz2
 License:	GPLv2
 URL:		http://storm.canonical.com/
