@@ -1,13 +1,14 @@
 %define oname	storm
 
 Summary:	Object Relational Mapper for Python
+
 Name:		python-%{oname}
-Version:	0.19
-Release:	5
+Version:	0.20
+Release:	1
 Group:		Development/Python
 License:	GPLv2
 Url:		http://storm.canonical.com/
-Source0:	https://launchpad.net/storm/trunk/0.19/+download/storm-%{version}.tar.bz2
+Source0:	https://launchpad.net/storm/trunk/0.20/+download/storm-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
 Requires:	python
@@ -37,4 +38,5 @@ cp -af storm/ %{buildroot}%{py_puresitedir}
 %files
 %doc TODO LICENSE README tests/tutorial.txt tests/
 %{py_puresitedir}/*
+
 
