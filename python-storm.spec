@@ -9,6 +9,7 @@ Group:		Development/Python
 License:	GPLv2
 Url:		http://storm.canonical.com/
 Source0:	https://launchpad.net/storm/trunk/0.20/+download/storm-%{version}.tar.bz2
+Source100: %{name}.rpmlintrc
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
 Requires:	python
