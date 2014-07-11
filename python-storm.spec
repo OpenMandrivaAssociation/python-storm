@@ -4,7 +4,7 @@ Summary:	Object Relational Mapper for Python
 
 Name:		python-%{oname}
 Version:	0.20
-Release:	2
+Release:	3
 Group:		Development/Python
 License:	GPLv2
 Url:		http://storm.canonical.com/
