@@ -4,13 +4,13 @@ Summary:	Object Relational Mapper for Python
 
 Name:		python-%{oname}
 Version:	0.20
-Release:	5
+Release:	6
 Group:		Development/Python
 License:	GPLv2
 Url:		http://storm.canonical.com/
 Source0:	https://launchpad.net/storm/trunk/0.20/+download/storm-%{version}.tar.bz2
 Source100: %{name}.rpmlintrc
-BuildArch:	noarch
+Patch1:		storm-0.20-exclude-tests.patch
 BuildRequires:	pkgconfig(python)
 Requires:	python
 Requires:	python-psycopg2
@@ -29,15 +29,16 @@ language like Python.
 
 %prep
 %setup -qn %{oname}-%{version}
+%apply_patches
 
 %build
+%__python setup.py build
 
 %install
-install -d %{buildroot}%{py_puresitedir}
-cp -af storm/ %{buildroot}%{py_puresitedir}
+%__python setup.py install -O1 --skip-build --root %{buildroot}
 
 %files
 %doc TODO LICENSE README tests/tutorial.txt tests/
-%{py_puresitedir}/*
+%{py_platsitedir}/*
 
 
