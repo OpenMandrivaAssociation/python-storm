@@ -12,9 +12,9 @@ Source0:	https://launchpad.net/storm/trunk/0.20/+download/storm-%{version}.tar.b
 Source100: %{name}.rpmlintrc
 Patch1:		storm-0.20-exclude-tests.patch
 BuildRequires:	pkgconfig(python)
-Requires:	python
-Requires:	python-psycopg2
-Requires:	python-sqlite2
+BuildRequires:	python2-setuptools
+Requires:	python2
+Requires:	python2-psycopg2
 
 %description
 Storm is an object-relation mapper (ORM) for the Python language. It allows
@@ -32,13 +32,13 @@ language like Python.
 %apply_patches
 
 %build
-%__python setup.py build
+%__python2 setup.py build
 
 %install
-%__python setup.py install -O1 --skip-build --root %{buildroot}
+%__python2 setup.py install -O1 --skip-build --root %{buildroot}
 
 %files
 %doc TODO LICENSE README tests/tutorial.txt tests/
-%{py_platsitedir}/*
+%{py2_platsitedir}/*
 
 
