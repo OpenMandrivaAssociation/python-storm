@@ -2,19 +2,20 @@
 
 Summary:	Object Relational Mapper for Python
 
-Name:		python-%{oname}
+Name:		python2-%{oname}
 Version:	0.20
 Release:	6
 Group:		Development/Python
 License:	GPLv2
 Url:		http://storm.canonical.com/
 Source0:	https://launchpad.net/storm/trunk/0.20/+download/storm-%{version}.tar.bz2
-Source100: %{name}.rpmlintrc
+Source100:	%{name}.rpmlintrc
 Patch1:		storm-0.20-exclude-tests.patch
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python2-setuptools
 Requires:	python2
 Requires:	python2-psycopg2
+%rename		python-%{oname}
 
 %description
 Storm is an object-relation mapper (ORM) for the Python language. It allows
