@@ -11,7 +11,7 @@ Url:		http://storm.canonical.com/
 Source0:	https://launchpad.net/storm/trunk/0.20/+download/storm-%{version}.tar.bz2
 Source100:	%{name}.rpmlintrc
 Patch1:		storm-0.20-exclude-tests.patch
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python2)
 BuildRequires:	python2-setuptools
 Requires:	python2
 Requires:	python2-psycopg2
