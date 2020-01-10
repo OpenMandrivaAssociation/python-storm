@@ -30,7 +30,7 @@ language like Python.
 
 %prep
 %setup -qn %{oname}-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 %__python2 setup.py build
