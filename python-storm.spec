@@ -12,6 +12,7 @@ Source0:	https://files.pythonhosted.org/packages/ba/4f/55ea93c45ed7de8f34b89af75
 Source100:	%{name}.rpmlintrc
 Patch1:		storm-0.20-exclude-tests.patch
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python-setuptools
 Requires:	python-psycopg2
 %rename		python-%{oname}
 
