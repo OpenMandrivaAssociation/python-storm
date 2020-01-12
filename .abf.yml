@@ -1,4 +1,2 @@
-removed_sources:
-  storm-0.19.tar.bz2: d54477aa871091fba49fd960cd8742104f34c135
 sources:
-  storm-0.20.tar.bz2: 5a46754c7f046090510ac8d8de89fe7700be481a
+  storm-0.22.tar.bz2: d74631f6d6408419ac7cbcf19fb4128bda768d76
