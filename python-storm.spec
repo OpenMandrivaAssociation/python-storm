@@ -3,12 +3,12 @@
 Summary:	Object Relational Mapper for Python
 
 Name:		python2-%{oname}
-Version:	0.22
+Version:	0.23
 Release:	1
 Group:		Development/Python
 License:	GPLv2
 Url:		http://storm.canonical.com/
-Source0:	https://files.pythonhosted.org/packages/ba/4f/55ea93c45ed7de8f34b89af75a6f1376d60a2614c60193f95c81d1bec019/storm-0.22.tar.bz2
+Source0:	https://files.pythonhosted.org/packages/ec/88/5dfdcb5948606487da14b8423daf71a861f598a3f823e870e8cf2bf2e5e9/storm-0.23.tar.bz2
 Source100:	%{name}.rpmlintrc
 Patch1:		storm-0.20-exclude-tests.patch
 BuildRequires:	pkgconfig(python3)
