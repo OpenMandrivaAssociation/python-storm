@@ -40,3 +40,5 @@ language like Python.
 %files
 %doc TODO LICENSE README
 #{py_platsitedir}/*
+%{python_sitearch}/storm-%{version}-py*.*.egg-info
+%{python_sitearch}/storm/
