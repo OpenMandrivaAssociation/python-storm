@@ -39,4 +39,4 @@ language like Python.
 
 %files
 %doc TODO LICENSE README
-%{py_platsitedir}/*
+#{py_platsitedir}/*
