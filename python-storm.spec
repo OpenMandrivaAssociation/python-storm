@@ -4,7 +4,7 @@ Summary:	Object Relational Mapper for Python
 
 Name:		python2-%{oname}
 Version:	0.25
-Release:	2
+Release:	3
 Group:		Development/Python
 License:	GPLv2
 Url:		http://storm.canonical.com/
@@ -39,4 +39,6 @@ language like Python.
 
 %files
 %doc TODO LICENSE README
-%{py_platsitedir}/*
+#{py_platsitedir}/*
+%{python_sitearch}/storm-%{version}-py*.*.egg-info
+%{python_sitearch}/storm/
