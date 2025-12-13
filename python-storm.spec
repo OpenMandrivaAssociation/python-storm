@@ -1,4 +1,4 @@
-%define oname	storm
+%define oname storm
 
 Name:				python-%{oname}
 Summary:		Object Relational Mapper for the Python programming language
@@ -8,7 +8,6 @@ Group:			Development/Python
 License:		LGPL-2.1
 URL:				https://launchpad.net/storm/
 Source0:		https://files.pythonhosted.org/packages/source/s/%{oname}/%{oname}-%{version}.tar.gz
-Source100:	%{name}.rpmlintrc
 
 BuildSystem:		python
 BuildRequires:	pkgconfig
