@@ -1,20 +1,23 @@
 %define oname	storm
 
-Summary:	Object Relational Mapper for Python
-
-Name:		python2-%{oname}
-Version:	0.25
-Release:	5
-Group:		Development/Python
-License:	GPLv2
-Url:		https://storm.canonical.com/
-Source0:	https://files.pythonhosted.org/packages/c0/f6/4b30697087af83edbc25584938fff7de08645ea6c2addf22420b4a1c70c9/storm-%{version}.tar.gz
+Name:				python-%{oname}
+Summary:		Object Relational Mapper for the Python programming language
+Version:		1.1
+Release:		1
+Group:			Development/Python
+License:		LGPL-2.1
+URL:				https://launchpad.net/storm/
+Source0:		https://files.pythonhosted.org/packages/source/s/%{oname}/%{oname}-%{version}.tar.gz
 Source100:	%{name}.rpmlintrc
-Patch1:		storm-0.20-exclude-tests.patch
-BuildRequires:	pkgconfig(python3)
-BuildRequires:	python-setuptools
-Requires:	python-psycopg2
-%rename		python-%{oname}
+
+BuildSystem:		python
+BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(cython)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(packaging)
+
+Obsoletes: python2-%{oname} < 1.0
 
 %description
 Storm is an object-relation mapper (ORM) for the Python language. It allows
@@ -27,18 +30,22 @@ language like Python.
 - Storm allows you to fallback to SQL if needed (or if you just prefer),
   allowing you to mix "old school" code and ORM code
 
+Documentation: https://storm-orm.readthedocs.io
+
 %prep
-%setup -qn %{oname}-%{version}
-%autopatch -p1
+%autosetup -n %{oname}-%{version} -p1
+# Remove bundled egg-info
+rm -rf %{oname}.egg-info
 
 %build
+export LDFLAGS="%{ldflags} -lpython%{py_ver}"
 %py_build
 
 %install
 %py_install
 
 %files
-%doc TODO LICENSE README
-#{py_platsitedir}/*
-%{python_sitearch}/storm-%{version}-py*.*.egg-info
+%doc README
+%license LICENSE
+%{python_sitearch}/storm-%{version}-py%{pyver}.egg-info
 %{python_sitearch}/storm/
