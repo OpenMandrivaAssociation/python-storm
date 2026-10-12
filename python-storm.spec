@@ -3,7 +3,7 @@
 Name:				python-%{oname}
 Summary:		Object Relational Mapper for the Python programming language
 Version:		1.2
-Release:		1
+Release:		2
 Group:			Development/Python
 License:		LGPL-2.1
 URL:				https://launchpad.net/storm/
