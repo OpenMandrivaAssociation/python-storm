@@ -2,8 +2,8 @@
 
 Name:				python-%{oname}
 Summary:		Object Relational Mapper for the Python programming language
-Version:		1.2
-Release:		2
+Version:		1.3
+Release:		1
 Group:			Development/Python
 License:		LGPL-2.1
 URL:				https://launchpad.net/storm/
@@ -32,7 +32,7 @@ language like Python.
 Documentation: https://storm-orm.readthedocs.io
 
 %prep
-%autosetup -n storm-1.2 -p1
+%autosetup -n storm-%{version} -p1
 # Remove bundled egg-info
 rm -rf %{oname}.egg-info
 
